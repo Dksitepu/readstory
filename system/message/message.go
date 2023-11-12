@@ -28,8 +28,8 @@ import (
 
 var (
     prefix = "."
-    self = false 
-	owner = "6285157489446"
+    self = true 
+	owner = "6282119206519"
 )
 
 func Msg(sock * waSocket.Client, msg * events.Message) {
@@ -67,7 +67,7 @@ func Msg(sock * waSocket.Client, msg * events.Message) {
     fmt.Println("\n===============================\nNAME: " + pushName + "\nJID: " + sender + "\nTYPE: " + msg.Info.Type + "\nMessage: " + m.GetCMD() + "")
     //fmt.Println(m.Msg.Message.GetPollUpdateMessage().GetMetadata())
 
-     if strings.EqualFold(m.GetCMD(), "bot") {
+    // if strings.EqualFold(m.GetCMD(), "bot") {
 m.Reply("Active")
 }
 	
